@@ -1,6 +1,7 @@
-import { SectionBox, Title } from "./Section.styled";
+import PropTypes from 'prop-types';
+import { SectionBox, Title } from './Section.styled';
 
-export function Section({title, children}) {
+export function Section({ title, children }) {
   return (
     <>
       <SectionBox>
@@ -10,3 +11,8 @@ export function Section({title, children}) {
     </>
   );
 }
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};

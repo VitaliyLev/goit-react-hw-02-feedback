@@ -1,4 +1,5 @@
-import {Good, Neutral, Bad} from './Statistics.styled'
+import PropTypes from 'prop-types';
+import { Good, Neutral, Bad } from './Statistics.styled';
 
 export function Statistics({
   good,
@@ -17,3 +18,11 @@ export function Statistics({
     </>
   );
 }
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  countTotalFeedback: PropTypes.number.isRequired,
+  PositiveFeedbackPercentage: PropTypes.number.isRequired,
+};
